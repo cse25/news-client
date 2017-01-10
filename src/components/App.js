@@ -1,12 +1,13 @@
-import '../assets/stylesheets/base.scss';
 import React, { Component } from 'react';
+import Header from './header';
 
-class App extends Component {
+export default class App extends Component {
   render() {
-    return(
-      <h1>Hello, {this.props.name}!</h1>
-    )
+    return (
+      <div>
+        <Header />
+        {this.props.children}
+      </div>
+    );
   }
-};
-
-export default App;
+}
